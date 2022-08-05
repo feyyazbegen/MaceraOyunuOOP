@@ -5,18 +5,19 @@ public class Game {
     public void start(){
         System.out.println("Macera Oyununa Hosgeldiniz !!");
         System.out.print("Lutfen Bir Isim Giriniz : ");
-        String playerName=input.nextLine();
-        Player player = new Player(playerName);
+       // String playerName=input.nextLine();
+        Player player = new Player("feyyaz");
         System.out.println("Sayin " + player.getPlayerName() + " bu karanlik oyuna hosgeldiniz. !!");
         System.out.println("Lutfen Bir Karakter Seciniz : ");
         player.selectCharacter();
 
         Location location = null;
         while (true){
+            player.printInfo();
             System.out.println("Bolgeler");
             System.out.println("1 - Guvenli Ev");
             System.out.println("2 - Magaza");
-            System.out.print("Gitmek istediğiniz bolgeyi seciniz : ");
+            System.out.print("Gitmek istediginiz bolgeyi seciniz : ");
             int selectLoc = input.nextInt();
             switch (selectLoc){
                 case 1:
